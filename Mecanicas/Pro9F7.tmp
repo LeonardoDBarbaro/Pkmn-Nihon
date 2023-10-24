@@ -79,13 +79,13 @@ region = Rect2(96, 120, 32, 40)
 atlas = ExtResource("3_rocdw")
 region = Rect2(64, 120, 32, 40)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5varg"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_4j1je"]
 atlas = ExtResource("3_rocdw")
 region = Rect2(32, 0, 32, 40)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1dlmw"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_qj8ke"]
 atlas = ExtResource("3_rocdw")
-region = Rect2(0, 0, 32, 40)
+region = Rect2(64, 0, 32, 40)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fkib8"]
 atlas = ExtResource("3_rocdw")
@@ -128,7 +128,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Adown",
-"speed": 4.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -183,10 +183,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_5varg")
+"texture": SubResource("AtlasTexture_4j1je")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_1dlmw")
+"texture": SubResource("AtlasTexture_qj8ke")
 }],
 "loop": false,
 "name": &"Sdown",
@@ -256,7 +256,7 @@ shape = SubResource("BoxShape3D_w30ae")
 transform = Transform3D(6, 0, 0, 0, -2.62268e-07, 6, 0, -6, -2.62268e-07, 1, 2, 0)
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_rcpjp")
-animation = &"Adown"
+animation = &"Aleft"
 script = ExtResource("4_sy7qd")
 
 [node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
