@@ -16,69 +16,69 @@ lightmap_size_hint = Vector2i(14, 21)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_w30ae"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_byf3f"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_kc7sr"]
 atlas = ExtResource("3_rocdw")
-region = Rect2(32, 0, 32, 32)
+region = Rect2(32, 0, 32, 40)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_k4ull"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_del8e"]
 atlas = ExtResource("3_rocdw")
-region = Rect2(0, 0, 32, 32)
+region = Rect2(64, 0, 32, 40)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_f3y1b"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_yjmkr"]
 atlas = ExtResource("3_rocdw")
-region = Rect2(96, 0, 32, 32)
+region = Rect2(96, 0, 32, 40)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1wtvv"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_2pbif"]
 atlas = ExtResource("3_rocdw")
-region = Rect2(64, 0, 32, 32)
+region = Rect2(0, 0, 32, 40)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ane2s"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_qn7gn"]
 atlas = ExtResource("3_rocdw")
-region = Rect2(32, 32, 32, 32)
+region = Rect2(32, 40, 32, 40)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_nifgf"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_nmkj6"]
 atlas = ExtResource("3_rocdw")
-region = Rect2(0, 32, 32, 32)
+region = Rect2(0, 40, 32, 40)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_218m7"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_wsuq2"]
 atlas = ExtResource("3_rocdw")
-region = Rect2(96, 32, 32, 32)
+region = Rect2(96, 40, 32, 40)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_sp38l"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_kmvkx"]
 atlas = ExtResource("3_rocdw")
-region = Rect2(64, 32, 32, 32)
+region = Rect2(64, 40, 32, 40)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_k80vb"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_y08dm"]
 atlas = ExtResource("3_rocdw")
-region = Rect2(32, 64, 32, 32)
+region = Rect2(32, 80, 32, 40)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_fwk2v"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_mcisu"]
 atlas = ExtResource("3_rocdw")
-region = Rect2(0, 64, 32, 32)
+region = Rect2(0, 80, 32, 40)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_spl3n"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_vw027"]
 atlas = ExtResource("3_rocdw")
-region = Rect2(96, 64, 32, 32)
+region = Rect2(96, 80, 32, 40)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_l2ekg"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_nejpo"]
 atlas = ExtResource("3_rocdw")
-region = Rect2(64, 64, 32, 32)
+region = Rect2(64, 80, 32, 40)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_4t8v4"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_4unl2"]
 atlas = ExtResource("3_rocdw")
-region = Rect2(32, 96, 32, 32)
+region = Rect2(32, 120, 32, 40)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_i6ilw"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_u27te"]
 atlas = ExtResource("3_rocdw")
-region = Rect2(0, 96, 32, 32)
+region = Rect2(0, 120, 32, 40)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_0ajyr"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_16rt3"]
 atlas = ExtResource("3_rocdw")
-region = Rect2(96, 96, 32, 32)
+region = Rect2(96, 120, 32, 40)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_bl4o2"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_75sbj"]
 atlas = ExtResource("3_rocdw")
-region = Rect2(64, 96, 32, 32)
+region = Rect2(64, 120, 32, 40)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5varg"]
 atlas = ExtResource("3_rocdw")
@@ -116,16 +116,16 @@ region = Rect2(0, 120, 32, 40)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_byf3f")
+"texture": SubResource("AtlasTexture_kc7sr")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_k4ull")
+"texture": SubResource("AtlasTexture_del8e")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_f3y1b")
+"texture": SubResource("AtlasTexture_yjmkr")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_1wtvv")
+"texture": SubResource("AtlasTexture_2pbif")
 }],
 "loop": false,
 "name": &"Adown",
@@ -133,16 +133,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ane2s")
+"texture": SubResource("AtlasTexture_qn7gn")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_nifgf")
+"texture": SubResource("AtlasTexture_nmkj6")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_218m7")
+"texture": SubResource("AtlasTexture_wsuq2")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_sp38l")
+"texture": SubResource("AtlasTexture_kmvkx")
 }],
 "loop": false,
 "name": &"Aleft",
@@ -150,16 +150,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_k80vb")
+"texture": SubResource("AtlasTexture_y08dm")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_fwk2v")
+"texture": SubResource("AtlasTexture_mcisu")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_spl3n")
+"texture": SubResource("AtlasTexture_vw027")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_l2ekg")
+"texture": SubResource("AtlasTexture_nejpo")
 }],
 "loop": false,
 "name": &"Aright",
@@ -167,16 +167,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_4t8v4")
+"texture": SubResource("AtlasTexture_4unl2")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_i6ilw")
+"texture": SubResource("AtlasTexture_u27te")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_0ajyr")
+"texture": SubResource("AtlasTexture_16rt3")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_bl4o2")
+"texture": SubResource("AtlasTexture_75sbj")
 }],
 "loop": false,
 "name": &"Aup",
@@ -257,7 +257,7 @@ shape = SubResource("BoxShape3D_w30ae")
 transform = Transform3D(6, 0, 0, 0, -2.62268e-07, 6, 0, -6, -2.62268e-07, 1, 2, 0)
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_rcpjp")
-animation = &"Aright"
+animation = &"Adown"
 script = ExtResource("4_sy7qd")
 
 [node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
@@ -265,7 +265,7 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 1, 13,
 fov = 67.5
 
 [node name="RayCast3D" type="RayCast3D" parent="CharacterBody3D"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, 0, 0, 0)
 script = ExtResource("5_nrjhw")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]

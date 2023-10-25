@@ -9,7 +9,7 @@ var taim : Array
 var interpol = false
 var distancia = 0.0
 var speed = 3.2
-var grilla = 2
+var grilla = 1
 var valu = 1
 var act = Vector3.ZERO
 var flag = 0
@@ -19,33 +19,13 @@ var timer = 0
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var anim = $AnimatedSprite3D
 
-var anima = {
-	0 : "Aup",
-	1 : "Adown",
-	2 : "Aleft",
-	3 : "Aright",
-}
+var anima = { 0 : "Aup", 1 : "Adown", 2 : "Aleft", 3 : "Aright",}
 
-var sanima = {
-	0 : "Sup",
-	1 : "Sdown",
-	2 : "Sleft",
-	3 : "Sright",
-}
+var sanima = { 0 : "Sup", 1 : "Sdown", 2 : "Sleft", 3 : "Sright",}
 
-var keys ={
-	"ui_up" : 0,
-	"ui_down" : 1,
-	"ui_left" : 2,
-	"ui_right" : 3
-}
+var keys ={ "ui_up" : 0, "ui_down" : 1, "ui_left" : 2, "ui_right" : 3}
 
-var movi = {
-	0 : Vector3(0,0,-2),
-	1 : Vector3(0,0,2),
-	2 : Vector3(-2,0,0),
-	3 : Vector3(2,0,0),
-}
+var movi = { 0 : Vector3(0,0,-2), 1 : Vector3(0,0,2), 2 : Vector3(-2,0,0), 3 : Vector3(2,0,0),}
 
 # FUNCIONES
 func getinp():
@@ -89,6 +69,7 @@ func _sinputs():
 func _ready():
 	taim = [0,0,0,0]
 	anter = Vector3.ZERO
+	snap_to_grid(grilla)
 
 func _process(delta):
 	_inputs(delta)
@@ -102,7 +83,7 @@ func _process(delta):
 		distancia = transform.origin.distance_to(iPosition+fPosition)
 		if(distancia < 0.1):
 			interpol = false
-			#snap_to_grid(grilla)
+			snap_to_grid(grilla)
 		else:
 			transform.origin = transform.origin + fPosition*delta*speed
 	_sinputs()
