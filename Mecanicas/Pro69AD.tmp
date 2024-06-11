@@ -1,0 +1,646 @@
+[gd_scene load_steps=63 format=3 uid="uid://ci1gtmixkqvvv"]
+
+[ext_resource type="Texture2D" uid="uid://5yyq65gg2xug" path="res://Piso.png" id="1_lmc6s"]
+[ext_resource type="Script" path="res://CharacterBody3D.gd" id="2_yypyr"]
+[ext_resource type="Texture2D" uid="uid://dgmk2iphhtavr" path="res://Gold.png" id="3_rocdw"]
+[ext_resource type="Texture2D" uid="uid://srgm10wk8667" path="res://fly-export.png" id="4_s88bh"]
+[ext_resource type="Script" path="res://AnimatedSprite3D.gd" id="4_sy7qd"]
+[ext_resource type="Script" path="res://Rayos.gd" id="5_bosug"]
+[ext_resource type="Texture2D" uid="uid://pgv0srtglbg5" path="res://swim-export.png" id="5_bv6ka"]
+[ext_resource type="Texture2D" uid="uid://beaisogqnjwyj" path="res://mount-export.png" id="5_uflip"]
+[ext_resource type="AudioStream" uid="uid://djpe3vtpg5qwi" path="res://2-99. Pokémon Techno-Sound Effects Collection.mp3" id="6_6pnng"]
+[ext_resource type="Script" path="res://AudioStreamPlayer.gd" id="6_dyank"]
+[ext_resource type="Texture2D" uid="uid://bdevj2ylvbmsw" path="res://water_tileset.png" id="9_yoiwg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_knsqv"]
+albedo_texture = ExtResource("1_lmc6s")
+uv1_scale = Vector3(3, 2, 0)
+texture_filter = 0
+
+[sub_resource type="BoxMesh" id="BoxMesh_i8qgq"]
+lightmap_size_hint = Vector2i(14, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_byf3f"]
+atlas = ExtResource("3_rocdw")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k4ull"]
+atlas = ExtResource("3_rocdw")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f3y1b"]
+atlas = ExtResource("3_rocdw")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1wtvv"]
+atlas = ExtResource("3_rocdw")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ane2s"]
+atlas = ExtResource("3_rocdw")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nifgf"]
+atlas = ExtResource("3_rocdw")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_218m7"]
+atlas = ExtResource("3_rocdw")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sp38l"]
+atlas = ExtResource("3_rocdw")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4u5k7"]
+atlas = ExtResource("3_rocdw")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k8h3h"]
+atlas = ExtResource("3_rocdw")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_747vd"]
+atlas = ExtResource("3_rocdw")
+region = Rect2(96, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6k3lq"]
+atlas = ExtResource("3_rocdw")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4t8v4"]
+atlas = ExtResource("3_rocdw")
+region = Rect2(32, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i6ilw"]
+atlas = ExtResource("3_rocdw")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ajyr"]
+atlas = ExtResource("3_rocdw")
+region = Rect2(96, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bl4o2"]
+atlas = ExtResource("3_rocdw")
+region = Rect2(64, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jgk32"]
+atlas = ExtResource("4_s88bh")
+region = Rect2(160, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ys5s3"]
+atlas = ExtResource("4_s88bh")
+region = Rect2(128, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l6kas"]
+atlas = ExtResource("4_s88bh")
+region = Rect2(32, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4id6g"]
+atlas = ExtResource("4_s88bh")
+region = Rect2(0, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_swkqd"]
+atlas = ExtResource("4_s88bh")
+region = Rect2(192, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n0cf5"]
+atlas = ExtResource("4_s88bh")
+region = Rect2(224, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_11d4p"]
+atlas = ExtResource("4_s88bh")
+region = Rect2(96, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_db1to"]
+atlas = ExtResource("4_s88bh")
+region = Rect2(64, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j2r4g"]
+atlas = ExtResource("5_uflip")
+region = Rect2(128, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8mwv2"]
+atlas = ExtResource("5_uflip")
+region = Rect2(160, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ab82h"]
+atlas = ExtResource("5_uflip")
+region = Rect2(0, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fgoai"]
+atlas = ExtResource("5_uflip")
+region = Rect2(32, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wtbn5"]
+atlas = ExtResource("5_uflip")
+region = Rect2(192, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bspjw"]
+atlas = ExtResource("5_uflip")
+region = Rect2(224, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n3yaf"]
+atlas = ExtResource("5_uflip")
+region = Rect2(64, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c4hm0"]
+atlas = ExtResource("5_uflip")
+region = Rect2(96, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ymoh"]
+atlas = ExtResource("5_bv6ka")
+region = Rect2(128, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bbbn0"]
+atlas = ExtResource("5_bv6ka")
+region = Rect2(160, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pckm6"]
+atlas = ExtResource("5_bv6ka")
+region = Rect2(32, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wv5aa"]
+atlas = ExtResource("5_bv6ka")
+region = Rect2(0, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_81e1a"]
+atlas = ExtResource("5_bv6ka")
+region = Rect2(192, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sot6e"]
+atlas = ExtResource("5_bv6ka")
+region = Rect2(224, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s7yjf"]
+atlas = ExtResource("5_bv6ka")
+region = Rect2(64, 0, 32, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6c0kq"]
+atlas = ExtResource("5_bv6ka")
+region = Rect2(96, 0, 32, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rcpjp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_byf3f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k4ull")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f3y1b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1wtvv")
+}],
+"loop": false,
+"name": &"Adown",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ane2s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nifgf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_218m7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sp38l")
+}],
+"loop": false,
+"name": &"Aleft",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4u5k7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k8h3h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_747vd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6k3lq")
+}],
+"loop": false,
+"name": &"Aright",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4t8v4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i6ilw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ajyr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bl4o2")
+}],
+"loop": false,
+"name": &"Aup",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jgk32")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ys5s3")
+}],
+"loop": true,
+"name": &"Fdown",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l6kas")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4id6g")
+}],
+"loop": true,
+"name": &"Fleft",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_swkqd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n0cf5")
+}],
+"loop": true,
+"name": &"Fright",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_11d4p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_db1to")
+}],
+"loop": true,
+"name": &"Fup",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j2r4g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8mwv2")
+}],
+"loop": true,
+"name": &"Mdown",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ab82h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fgoai")
+}],
+"loop": true,
+"name": &"Mleft",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wtbn5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bspjw")
+}],
+"loop": true,
+"name": &"Mright",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n3yaf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c4hm0")
+}],
+"loop": true,
+"name": &"Mup",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ymoh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bbbn0")
+}],
+"loop": true,
+"name": &"Sdown",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pckm6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wv5aa")
+}],
+"loop": true,
+"name": &"Sleft",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_81e1a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sot6e")
+}],
+"loop": true,
+"name": &"Sright",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s7yjf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6c0kq")
+}],
+"loop": true,
+"name": &"Sup",
+"speed": 5.0
+}]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_77pxd"]
+margin = 0.0
+size = Vector3(1.99, 1.99, 1.99)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yowcd"]
+size = Vector3(1, 1.99, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mgfvb"]
+transparency = 1
+blend_mode = 3
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4tlx3"]
+albedo_texture = ExtResource("9_yoiwg")
+uv1_scale = Vector3(16, 16, 16)
+
+[sub_resource type="BoxMesh" id="BoxMesh_hcp3m"]
+lightmap_size_hint = Vector2i(14, 21)
+
+[sub_resource type="BoxMesh" id="BoxMesh_fuobc"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_nimnv"]
+margin = 0.0
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+backface_collision = true
+
+[sub_resource type="PrismMesh" id="PrismMesh_ptoip"]
+left_to_right = 0.0
+
+[node name="Node3D" type="Node3D"]
+
+[node name="CSGMesh3D2" type="CSGMesh3D" parent="."]
+transform = Transform3D(20, 0, 0, 0, 0.3, 0, 0, 0, 20, 20, -0.4, 0)
+material_override = SubResource("StandardMaterial3D_knsqv")
+use_collision = true
+collision_mask = 2
+mesh = SubResource("BoxMesh_i8qgq")
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="."]
+transform = Transform3D(20, 0, 0, 0, 0.5, 0, 0, 0, 20, 0, -0.5, 0)
+material_override = SubResource("StandardMaterial3D_knsqv")
+use_collision = true
+collision_mask = 2
+mesh = SubResource("BoxMesh_i8qgq")
+
+[node name="GridMap" type="GridMap" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
+cell_size = Vector3(2, 1, 2)
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 4.98356, 1)
+slide_on_ceiling = false
+wall_min_slide_angle = 0.0
+floor_stop_on_slope = false
+floor_block_on_wall = false
+floor_max_angle = 0.0
+floor_snap_length = 0.0
+script = ExtResource("2_yypyr")
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.24696, 9.08426)
+current = true
+fov = 67.5
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="CharacterBody3D"]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 0, 0.75, 0)
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_rcpjp")
+animation = &"Adown"
+autoplay = "Adown"
+script = ExtResource("4_sy7qd")
+
+[node name="Node3D" type="Node3D" parent="CharacterBody3D"]
+script = ExtResource("5_bosug")
+
+[node name="ShapeCast3D" type="ShapeCast3D" parent="CharacterBody3D/Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("BoxShape3D_77pxd")
+target_position = Vector3(0, 0, 0)
+debug_shape_custom_color = Color(1, 1, 0, 1)
+
+[node name="RayCast3D6" type="RayCast3D" parent="CharacterBody3D/Node3D"]
+transform = Transform3D(1, 0, 0, 0, 10, 0, 0, 0, 1, 0, 0, 0)
+hit_from_inside = true
+collide_with_areas = true
+debug_shape_custom_color = Color(1, 0.501961, 0.435294, 1)
+
+[node name="ShapeCast3D2" type="ShapeCast3D" parent="CharacterBody3D/Node3D"]
+transform = Transform3D(1, 0, 0, 0, 0.2, 0, 0, 0, 1, -1, -0.430573, 0)
+shape = SubResource("BoxShape3D_yowcd")
+target_position = Vector3(0, 0, 0)
+debug_shape_custom_color = Color(0, 1, 0, 1)
+
+[node name="RayCast3D" type="RayCast3D" parent="CharacterBody3D/Node3D"]
+transform = Transform3D(0.1, 0, 0, 0, 5, 0, 0, 0, 0.1, 0, 0, 0)
+debug_shape_custom_color = Color(0.996078, 0.298039, 1, 1)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -5, 1.06, -1)
+use_collision = true
+material = SubResource("StandardMaterial3D_mgfvb")
+
+[node name="Cosas" type="Node" parent="."]
+
+[node name="CSGMesh3D3" type="CSGMesh3D" parent="Cosas"]
+transform = Transform3D(50, 0, 0, 0, 1, 0, 0, 0, 50, 1.7, -3, 35.301)
+material_override = SubResource("StandardMaterial3D_4tlx3")
+use_collision = true
+mesh = SubResource("BoxMesh_hcp3m")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Cosas"]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, -5, 0.55, 3)
+operation = 1
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Cosas"]
+transform = Transform3D(2, 0, 0, 0, 4, 0, 0, 0, 2, -0.17, 1.7, 3)
+use_collision = true
+
+[node name="Sonido" type="Node" parent="."]
+
+[node name="Accion" type="AudioStreamPlayer" parent="Sonido"]
+stream = ExtResource("6_6pnng")
+script = ExtResource("6_dyank")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(-2, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, -2, 25, 0.25, 1)
+mesh = SubResource("BoxMesh_fuobc")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_nimnv")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 1, -1, 0.5, 2.98023e-08)
+mesh = SubResource("BoxMesh_fuobc")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/MeshInstance3D/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_nimnv")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D/MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 2.25, 0, 0, 0, 1, -3, 0.375, 0)
+mesh = SubResource("BoxMesh_fuobc")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D/MeshInstance3D/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/MeshInstance3D/MeshInstance3D/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_nimnv")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-2, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, -2, 25, 0.25, 7)
+mesh = SubResource("BoxMesh_fuobc")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_nimnv")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D2"]
+transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 1, -1, 0.5, 2.38419e-07)
+mesh = SubResource("BoxMesh_fuobc")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D2/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D2/MeshInstance3D/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_nimnv")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D2/MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 2.25, 0, 0, 0, 1, -3, 0.375, 0)
+mesh = SubResource("BoxMesh_fuobc")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D2/MeshInstance3D/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D2/MeshInstance3D/MeshInstance3D/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_nimnv")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="MeshInstance3D2"]
+transform = Transform3D(-1, 0, 3.01992e-07, 0, 1, 0, -1.50996e-07, 0, -2, 4, 0, 8.5)
+mesh = SubResource("BoxMesh_fuobc")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D2/MeshInstance3D2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D2/MeshInstance3D2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_nimnv")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D2/MeshInstance3D2"]
+transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 1, -1, 0.5, 2.38419e-07)
+mesh = SubResource("BoxMesh_fuobc")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D2/MeshInstance3D2/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D2/MeshInstance3D2/MeshInstance3D/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_nimnv")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D2/MeshInstance3D2/MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 2.25, 0, 0, 0, 1, -3, 0.375, 0)
+mesh = SubResource("BoxMesh_fuobc")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D2/MeshInstance3D2/MeshInstance3D/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D2/MeshInstance3D2/MeshInstance3D/MeshInstance3D/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_nimnv")
+
+[node name="CSGMesh3D4" type="CSGMesh3D" parent="."]
+transform = Transform3D(-2, 0, 2.11394e-06, 0, 1, 0, -3.01992e-07, 0, -14, 25, 1.25, 1)
+use_collision = true
+mesh = SubResource("PrismMesh_ptoip")
+
+[node name="CSGMesh3D3" type="CSGMesh3D" parent="."]
+transform = Transform3D(-2, 0, -3.01992e-07, 0, 1, 0, 3.01992e-07, 0, -2, 23, 0.25, 1)
+use_collision = true
+mesh = SubResource("PrismMesh_ptoip")
+
+[node name="CSGMesh3D5" type="CSGMesh3D" parent="."]
+transform = Transform3D(-2, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, -2, 31, 3.25, 1)
+use_collision = true
+mesh = SubResource("PrismMesh_ptoip")
+
+[node name="CSGMesh3D6" type="CSGMesh3D" parent="."]
+transform = Transform3D(-2, 0, -3.01992e-07, 0, 1, 0, 3.01992e-07, 0, -2, 29, 2.25, 1)
+use_collision = true
+mesh = SubResource("PrismMesh_ptoip")
+
+[node name="CSGMesh3D11" type="CSGMesh3D" parent="."]
+transform = Transform3D(-2, 0, -3.01992e-07, 0, 1, 0, 3.01992e-07, 0, -2, 29, 2.25, 1)
+use_collision = true
+mesh = SubResource("PrismMesh_ptoip")
+
+[node name="CSGMesh3D7" type="CSGMesh3D" parent="."]
+transform = Transform3D(-8.74228e-08, 0, 2, 0, 1, 0, -2, 0, -8.74228e-08, 19, 1.25, 5)
+use_collision = true
+mesh = SubResource("PrismMesh_ptoip")
+
+[node name="CSGMesh3D8" type="CSGMesh3D" parent="."]
+transform = Transform3D(-8.74228e-08, 0, 2, 0, 1, 0, -2, 0, -8.74228e-08, 19, 0.25, 3)
+use_collision = true
+mesh = SubResource("PrismMesh_ptoip")
+
+[node name="CSGMesh3D9" type="CSGMesh3D" parent="."]
+transform = Transform3D(-8.74228e-08, 0, -2, 0, 1, 0, 2, 0, -8.74228e-08, 27, 3.25, -3)
+use_collision = true
+mesh = SubResource("PrismMesh_ptoip")
+
+[node name="CSGMesh3D10" type="CSGMesh3D" parent="."]
+transform = Transform3D(-8.74228e-08, 0, -2, 0, 1, 0, 2, 0, -8.74228e-08, 27, 2.25, -1)
+use_collision = true
+mesh = SubResource("PrismMesh_ptoip")
+
+[node name="CSGMesh3D13" type="CSGMesh3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, 7, 1.25, 1)
+use_collision = true
+mesh = SubResource("PrismMesh_ptoip")
+
+[node name="CSGMesh3D14" type="CSGMesh3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, 9, 0.25, -3)
+use_collision = true
+mesh = SubResource("PrismMesh_ptoip")
+
+[connection signal="interaccion" from="CharacterBody3D" to="Sonido/Accion" method="_on_character_body_3d_interaccion"]

@@ -1,10 +1,14 @@
-[gd_scene load_steps=34 format=3 uid="uid://ci1gtmixkqvvv"]
+[gd_scene load_steps=16 format=3 uid="uid://ci1gtmixkqvvv"]
 
 [ext_resource type="Texture2D" uid="uid://5yyq65gg2xug" path="res://Piso.png" id="1_lmc6s"]
-[ext_resource type="Script" path="res://CharacterBody3D.gd" id="2_yypyr"]
-[ext_resource type="Texture2D" uid="uid://dgmk2iphhtavr" path="res://Gold.png" id="3_rocdw"]
-[ext_resource type="Script" path="res://AnimatedSprite3D.gd" id="4_sy7qd"]
-[ext_resource type="Script" path="res://RayCast3D.gd" id="5_nrjhw"]
+[ext_resource type="PackedScene" uid="uid://byd2x5kyol36r" path="res://PJ.tscn" id="2_llaxa"]
+[ext_resource type="MeshLibrary" uid="uid://c818r06stklad" path="res://Silent Running.tres" id="2_mgkhr"]
+[ext_resource type="Texture2D" uid="uid://bmnx1v0tuw7ib" path="res://marco2.png" id="4_7d6se"]
+[ext_resource type="Script" path="res://pause_popup.gd" id="4_nfuao"]
+[ext_resource type="FontFile" uid="uid://b0d5gyrk6acdh" path="res://godot-jolt/PKMN RBYGSC.ttf" id="5_w6wew"]
+[ext_resource type="Texture2D" uid="uid://bg4cxebwl2dq7" path="res://Tri32.png" id="6_74shl"]
+[ext_resource type="Script" path="res://botonmaestro.gd" id="7_8n4dc"]
+[ext_resource type="StyleBox" uid="uid://bqiawjon3tf74" path="res://Flecha.tres" id="9_ctu01"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_knsqv"]
 albedo_texture = ExtResource("1_lmc6s")
@@ -14,260 +18,234 @@ texture_filter = 0
 [sub_resource type="BoxMesh" id="BoxMesh_i8qgq"]
 lightmap_size_hint = Vector2i(14, 21)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_w30ae"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_plgem"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_byf3f"]
-atlas = ExtResource("3_rocdw")
-region = Rect2(32, 0, 32, 32)
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d7pth"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_k4ull"]
-atlas = ExtResource("3_rocdw")
-region = Rect2(0, 0, 32, 32)
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_my0oj"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_f3y1b"]
-atlas = ExtResource("3_rocdw")
-region = Rect2(96, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1wtvv"]
-atlas = ExtResource("3_rocdw")
-region = Rect2(64, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ane2s"]
-atlas = ExtResource("3_rocdw")
-region = Rect2(32, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_nifgf"]
-atlas = ExtResource("3_rocdw")
-region = Rect2(0, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_218m7"]
-atlas = ExtResource("3_rocdw")
-region = Rect2(96, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_sp38l"]
-atlas = ExtResource("3_rocdw")
-region = Rect2(64, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_k80vb"]
-atlas = ExtResource("3_rocdw")
-region = Rect2(32, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fwk2v"]
-atlas = ExtResource("3_rocdw")
-region = Rect2(0, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_spl3n"]
-atlas = ExtResource("3_rocdw")
-region = Rect2(96, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_l2ekg"]
-atlas = ExtResource("3_rocdw")
-region = Rect2(64, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4t8v4"]
-atlas = ExtResource("3_rocdw")
-region = Rect2(32, 96, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_i6ilw"]
-atlas = ExtResource("3_rocdw")
-region = Rect2(0, 96, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0ajyr"]
-atlas = ExtResource("3_rocdw")
-region = Rect2(96, 96, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bl4o2"]
-atlas = ExtResource("3_rocdw")
-region = Rect2(64, 96, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5varg"]
-atlas = ExtResource("3_rocdw")
-region = Rect2(32, 0, 32, 40)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1dlmw"]
-atlas = ExtResource("3_rocdw")
-region = Rect2(0, 0, 32, 40)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fkib8"]
-atlas = ExtResource("3_rocdw")
-region = Rect2(96, 40, 32, 40)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_y85se"]
-atlas = ExtResource("3_rocdw")
-region = Rect2(64, 40, 32, 40)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_sm2jf"]
-atlas = ExtResource("3_rocdw")
-region = Rect2(32, 80, 32, 40)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_230kr"]
-atlas = ExtResource("3_rocdw")
-region = Rect2(0, 80, 32, 40)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_40jrx"]
-atlas = ExtResource("3_rocdw")
-region = Rect2(32, 120, 32, 40)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6scsu"]
-atlas = ExtResource("3_rocdw")
-region = Rect2(0, 120, 32, 40)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_rcpjp"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_byf3f")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_k4ull")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_f3y1b")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1wtvv")
-}],
-"loop": false,
-"name": &"Adown",
-"speed": 4.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ane2s")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_nifgf")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_218m7")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_sp38l")
-}],
-"loop": false,
-"name": &"Aleft",
-"speed": 6.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_k80vb")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fwk2v")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_spl3n")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_l2ekg")
-}],
-"loop": false,
-"name": &"Aright",
-"speed": 6.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4t8v4")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_i6ilw")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0ajyr")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bl4o2")
-}],
-"loop": false,
-"name": &"Aup",
-"speed": 6.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_5varg")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1dlmw")
-}],
-"loop": false,
-"name": &"Sdown",
-"speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fkib8")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_y85se")
-}],
-"loop": false,
-"name": &"Sleft",
-"speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_sm2jf")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_230kr")
-}],
-"loop": false,
-"name": &"Sright",
-"speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_40jrx")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6scsu")
-}],
-"loop": false,
-"name": &"Sup",
-"speed": 10.0
-}]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_apwjm"]
 
 [node name="Node3D" type="Node3D"]
 
-[node name="CSGMesh3D2" type="CSGMesh3D" parent="."]
-transform = Transform3D(20, 0, 0, 0, 0.01, 0, 0, 0, 20, 12, 0, 0)
+[node name="Piso" type="CSGMesh3D" parent="."]
+transform = Transform3D(20, 0, 0, 0, 0.01, 0, 0, 0, 20, 14, -0.01, 0)
 material_override = SubResource("StandardMaterial3D_knsqv")
 use_collision = true
-mesh = SubResource("BoxMesh_i8qgq")
-
-[node name="CSGMesh3D" type="CSGMesh3D" parent="."]
-transform = Transform3D(20, 0, 0, 0, 0.1, 0, 0, 0, 20, 0, 0, 0)
-material_override = SubResource("StandardMaterial3D_knsqv")
-use_collision = true
+collision_mask = 2
 mesh = SubResource("BoxMesh_i8qgq")
 
 [node name="GridMap" type="GridMap" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.568966, -0.00745487, 0.0688007)
-cell_size = Vector3(2, 1, 2)
+mesh_library = ExtResource("2_mgkhr")
+cell_size = Vector3(2, 0.5, 2)
+cell_octant_size = 1
+cell_center_y = false
+data = {
+"cells": PackedInt32Array(12, 1, 3, 13, 1, 3, 14, 1, 3, 15, 1, 3, 16, 1, 3, 16, 0, 3, 15, 0, 3, 14, 0, 3, 13, 0, 3, 12, 0, 3, 17, 0, 3, 17, 1, 3, -131054, 0, 0, -131054, 1, 0, -131053, 0, 0, -131053, 1, 0, 65544, 1, 1, 131081, 1, 0, 65543, 1, 655362)
+}
+metadata/_editor_floor_ = Vector3(0, 1, 0)
 
-[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -1.9, 1)
-script = ExtResource("2_yypyr")
+[node name="CharacterBody3D" parent="." instance=ExtResource("2_llaxa")]
+process_mode = 1
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2, 0)
-shape = SubResource("BoxShape3D_w30ae")
+[node name="pause_popup" type="Control" parent="."]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -459.0
+grow_horizontal = 0
+size_flags_horizontal = 0
+script = ExtResource("4_nfuao")
 
-[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="CharacterBody3D"]
-transform = Transform3D(6, 0, 0, 0, -2.62268e-07, 6, 0, -6, -2.62268e-07, 1, 2, 0)
-texture_filter = 0
-sprite_frames = SubResource("SpriteFrames_rcpjp")
-animation = &"Aright"
-script = ExtResource("4_sy7qd")
+[node name="ColorRect" type="ColorRect" parent="pause_popup"]
+layout_mode = 0
+offset_left = 234.0
+offset_top = 28.0
+offset_right = 451.0
+offset_bottom = 327.0
 
-[node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 1, 13, -0.603)
-fov = 67.5
+[node name="NinePatchRect" type="NinePatchRect" parent="pause_popup"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 219.0
+offset_top = 8.0
+offset_right = 463.0
+offset_bottom = 345.0
+texture = ExtResource("4_7d6se")
+patch_margin_left = 25
+patch_margin_top = 25
+patch_margin_right = 25
+patch_margin_bottom = 25
 
-[node name="RayCast3D" type="RayCast3D" parent="CharacterBody3D"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
-script = ExtResource("5_nrjhw")
+[node name="VBoxContainer" type="VBoxContainer" parent="pause_popup"]
+texture_filter = 1
+layout_direction = 2
+layout_mode = 0
+offset_left = 264.0
+offset_top = 41.0
+offset_right = 475.0
+offset_bottom = 327.0
+scale = Vector2(0.861275, 0.963874)
+theme_override_constants/separation = 10
 
-[node name="CSGBox3D" type="CSGBox3D" parent="."]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -5, 1, 3)
-use_collision = true
+[node name="Button" type="Button" parent="pause_popup/VBoxContainer"]
+process_mode = 3
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_w6wew")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxEmpty_plgem")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_d7pth")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_my0oj")
+text = "POKéDEX"
+icon = ExtResource("6_74shl")
+alignment = 0
+script = ExtResource("7_8n4dc")
+
+[node name="Button2" type="Button" parent="pause_popup/VBoxContainer"]
+process_mode = 3
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_w6wew")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxEmpty_apwjm")
+theme_override_styles/hover = ExtResource("9_ctu01")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_my0oj")
+text = "POKéMON"
+icon = ExtResource("6_74shl")
+alignment = 0
+script = ExtResource("7_8n4dc")
+
+[node name="Button3" type="Button" parent="pause_popup/VBoxContainer"]
+process_mode = 3
+texture_filter = 3
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_w6wew")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxEmpty_apwjm")
+theme_override_styles/hover = ExtResource("9_ctu01")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_my0oj")
+text = "PACK"
+icon = ExtResource("6_74shl")
+alignment = 0
+script = ExtResource("7_8n4dc")
+
+[node name="Button4" type="Button" parent="pause_popup/VBoxContainer"]
+process_mode = 3
+texture_filter = 3
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_w6wew")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxEmpty_apwjm")
+theme_override_styles/hover = ExtResource("9_ctu01")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_my0oj")
+text = "POKéGEAR"
+icon = ExtResource("6_74shl")
+alignment = 0
+script = ExtResource("7_8n4dc")
+
+[node name="Button5" type="Button" parent="pause_popup/VBoxContainer"]
+process_mode = 3
+texture_filter = 3
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_w6wew")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxEmpty_apwjm")
+theme_override_styles/hover = ExtResource("9_ctu01")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_my0oj")
+text = "PLAYER"
+icon = ExtResource("6_74shl")
+alignment = 0
+script = ExtResource("7_8n4dc")
+
+[node name="Button6" type="Button" parent="pause_popup/VBoxContainer"]
+process_mode = 3
+texture_filter = 3
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_w6wew")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxEmpty_apwjm")
+theme_override_styles/hover = ExtResource("9_ctu01")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_my0oj")
+text = "SAVE"
+icon = ExtResource("6_74shl")
+alignment = 0
+script = ExtResource("7_8n4dc")
+
+[node name="Button7" type="Button" parent="pause_popup/VBoxContainer"]
+process_mode = 3
+texture_filter = 3
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_w6wew")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxEmpty_apwjm")
+theme_override_styles/hover = ExtResource("9_ctu01")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_my0oj")
+text = "OPTION"
+icon = ExtResource("6_74shl")
+alignment = 0
+script = ExtResource("7_8n4dc")
+
+[node name="Button8" type="Button" parent="pause_popup/VBoxContainer"]
+process_mode = 3
+texture_filter = 3
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_w6wew")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxEmpty_apwjm")
+theme_override_styles/hover = ExtResource("9_ctu01")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_my0oj")
+text = "EXIT"
+icon = ExtResource("6_74shl")
+alignment = 0
+script = ExtResource("7_8n4dc")
