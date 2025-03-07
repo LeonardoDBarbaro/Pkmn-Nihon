@@ -1,0 +1,46 @@
+--BEGIN
+P1 = CargarP1()
+P2 = CargarP2()
+
+--LOOP
+
+resetPrioridad(P1,P2)
+
+efectoInicioTurno(P1,P2)
+
+if P1.speed > P2.speed:
+	P1.prioridad = TRUE
+	
+elif P1.speed < P2.speed:
+	P2.prioridad = TRUE
+	
+else:
+	k = random(1,2)
+	if k == 1:
+		P1.prioridad = TRUE
+	else:
+		P2.prioridad = TRUE
+		
+EfectoPostPrioridad(P1,P2)
+
+getAcciones()
+
+if P1.hp > 0 AND P2.hp > 0:
+	if P1.prioridad == TRUE:
+		accion(P1)
+		if P2.hp > 0:
+			accion(P2)
+	else:
+		accion(P2)
+		if P1.hp > 0:
+			accion(P1)
+			
+if P1.hp <= 0:
+        cambiarPokemon(P1)
+		efectoDeInvocacion(P1)
+if P2.hp <= 0:
+        cambiarPokemon(P2)
+		efectoDeInvocacion(P2)
+	
+efectoFinalTurno(P1,P2)
+

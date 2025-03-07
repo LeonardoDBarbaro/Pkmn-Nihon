@@ -1,0 +1,32 @@
+funcion accion(vectorInput,P1,P2):
+
+
+	if vectorInput[0] == 1:
+		atacar(VectorInput[1])
+	elif vectorInput[0] == 2:
+		usarObjeto(VectorInput[1])
+	elif vectorInput[0] == 3:
+		if not checkCambiar():	
+			cambiarPKMN(VectorInput[1])
+	elif VectorInput[0] == 4:
+		if not checkHuir():
+			huir(P1,P2)
+			
+			
+funcion huir(P1,P2)
+	if combatType != 1:
+		return false
+	
+	if !holdItemEffect():
+		return false
+	
+	if !abilityCheck():
+		return false
+		
+	if !moveCheck():
+		return false
+		
+	if P1.speed > P2.speed:
+		return true
+	else:
+		return calculo()
